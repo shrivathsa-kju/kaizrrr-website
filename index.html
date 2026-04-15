@@ -1,11 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Kaizrrr</title>
-  </head>
-  <body>
-    <h1>Kaizrr is live 🚀</h1>
-    <p>GitHub Pages connected to custom domain</p>
-    <h2>Mikes List</h2>
- </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kaizrr</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 90%;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.85;
+            margin-bottom: 30px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: #00e5ff;
+            margin: 20px auto;
+            border-radius: 2px;
+        }
+
+        .about {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 35px;
+            color: #e0e0e0;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: #00e5ff;
+            color: #003b44;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 229, 255, 0.4);
+        }
+
+        .btn-secondary {
+            border: 2px solid #00e5ff;
+            color: #00e5ff;
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: #00e5ff;
+            color: #003b44;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Kaizrr</h1>
+        <p class="tagline">Code • Build • Learn • Grow</p>
+
+        <div class="divider"></div>
+
+        <p class="about">
+            Welcome to Kaizrr. This is a personal space built to showcase learning,
+            development projects, and experiments across modern technologies like
+            Java, Spring Boot, and front‑end frameworks.  
+            <br><br>
+            Stay tuned — more is coming soon 🚀
+        </p>
+
+        <div class="buttons">
+            <a href="https://github.com/" class="btn btn-primary">GitHub</a>
+            <a href="#" class="btn btn-secondary">Projects</a>
+        </div>
+
+        <footer>
+            © 2026 Kaizrr • Built with ❤️
+        </footer>
+    </div>
+
+</body>
 </html>
