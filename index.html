@@ -6,6 +6,52 @@
   <body>
     <h1>Kaizrr is live 🚀</h1>
     <p>GitHub Pages connected to custom domain</p>
+    <h2>Mikes List</h2>
+
+@if (errorMessage) {
+<div style="color: red; margin-bottom: 10px;">
+  {{ errorMessage }}
+</div>
+}
+
+@if (isLoading) {
+<p>Loading mikes...</p>
+} @else if (mikes.length === 0) {
+<p>No mikes found. <a routerLink="/addMike">Add one now</a></p>
+} @else {
+<table border="1" cellpadding="10">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Purchase Date</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (mike of mikes; track mike.id) {
+    <tr>
+      <td>{{ mike.id }}</td>
+      <td>{{ mike.name }}</td>
+      <td>{{ mike.purchaseDate }}</td>
+      <td>{{ mike.qty }}</td>
+      <td>${{ mike.price }}</td>
+      <td>
+        <button [routerLink]="['/editMike', mike.id]">Edit</button>
+        <button (click)="deleteMike(mike.id!)" style="margin-left: 5px;">Delete</button>
+      </td>
+    </tr>
+    }
+  </tbody>
+</table>
+}
+
+<br />
+<button routerLink="/addMike">Add New Mike</button>
+<button routerLink="/" style="margin-left: 5px;">Back to Home</button>
+
   </body>
 </html>
 ``
